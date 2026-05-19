@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess AI</title>
+  </head>
+  <body>
+
+    <!-- ── Auth overlay (shown when logged out) ─────────────────────────── -->
+    <div id="auth-overlay" class="auth-overlay">
+
+      <!-- Login panel -->
+      <div id="login-panel" class="auth-panel">
+        <div class="auth-logo">♟</div>
+        <h1 class="auth-title">Chess AI</h1>
+        <p class="auth-subtitle">Welcome back</p>
+        <div class="auth-form">
+          <input id="login-username" type="text"     placeholder="Username"  autocomplete="username" />
+          <input id="login-password" type="password" placeholder="Password"  autocomplete="current-password" />
+          <button id="login-btn" type="button">Log In</button>
+          <p id="login-error" class="auth-error"></p>
+        </div>
+        <p class="auth-switch">No account? <a href="#" id="go-register">Create one</a></p>
+      </div>
+
+      <!-- Register panel -->
+      <div id="register-panel" class="auth-panel" hidden>
+        <div class="auth-logo">♟</div>
+        <h1 class="auth-title">Chess AI</h1>
+        <p class="auth-subtitle">Create your account</p>
+        <div class="auth-form">
+          <input id="reg-username" type="text"     placeholder="Username (min. 3 chars)"  autocomplete="username" />
+          <input id="reg-password" type="password" placeholder="Password (min. 6 chars)"  autocomplete="new-password" />
+          <input id="reg-confirm"  type="password" placeholder="Confirm password"          autocomplete="new-password" />
+          <button id="register-btn" type="button">Create Account</button>
+          <p id="register-error" class="auth-error"></p>
+        </div>
+        <p class="auth-switch">Already have an account? <a href="#" id="go-login">Log in</a></p>
+      </div>
+
+    </div>
+
+    <!-- ── Main app (hidden until logged in) ────────────────────────────── -->
+    <main class="app" id="app" hidden>
+      <header class="header">
+        <div class="header-row">
+          <h1>Chess AI</h1>
+          <div class="user-bar">
+            <span class="user-icon">👤</span>
+            <span id="username-display" class="username-display"></span>
+            <button id="logout-btn" type="button" class="logout-btn">Logout</button>
+          </div>
+        </div>
+        <p class="subtitle">Play as White against the AI, or challenge a friend online.</p>
+      </header>
+
+      <div class="mode-tabs">
+        <button id="mode-ai-btn" class="mode-tab active" type="button">🤖 vs AI</button>
+        <button id="mode-mp-btn" class="mode-tab" type="button">👥 vs Player</button>
+      </div>
+
+      <section class="layout">
+        <div class="board-panel">
+          <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+        </div>
+
+        <aside class="info-panel">
+          <div class="controls">
+            <button id="new-game" type="button">New Game</button>
+            <button id="hint-move" type="button" class="secondary">Hint Move</button>
+            <button id="play-hint" type="button" class="secondary">Play Hint</button>
+          </div>
+
+          <div id="lobby-card" class="card lobby-card" hidden>
+            <h2>Online Match</h2>
+            <div class="lobby-actions">
+              <button id="create-room-btn" type="button">Create Room</button>
+              <div class="join-row">
+                <input id="room-code-input" type="text" placeholder="Enter room code" maxlength="6" autocomplete="off" />
+                <button id="join-room-btn" type="button" class="secondary">Join</button>
+              </div>
+            </div>
+            <p id="lobby-status" class="lobby-status"></p>
+          </div>
+
+          <div class="card">
+            <p><strong>Status:</strong> <span id="status-line"></span></p>
+            <p><strong>Selected:</strong> <span id="selected-square">None</span></p>
+            <p><strong>Opponent:</strong> <span id="engine-mode"></span></p>
+            <p id="hint-row"><strong>Hint:</strong> <span id="hint-line">Press "Hint Move".</span></p>
+          </div>
+
+          <div class="card">
+            <h2>Moves</h2>
+            <ol id="move-list" class="move-list"></ol>
+          </div>
+
+          <div class="card coach-card">
+            <div class="coach-header">
+              <span class="coach-avatar">🎓</span>
+              <h2>Coach G</h2>
+            </div>
+            <div id="coach-message" class="coach-message">Click "Ask Coach" for advice on the current position.</div>
+            <button id="ask-coach" type="button" class="secondary coach-btn">Ask Coach</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
