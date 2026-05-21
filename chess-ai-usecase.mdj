@@ -1,0 +1,146 @@
+{
+  "_type": "Project",
+  "_id": "P001",
+  "name": "Chess AI App",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "M001",
+      "name": "Modele Chess AI",
+      "_parent": { "$ref": "P001" },
+      "ownedElements": [
+        { "_type": "UMLClass", "_id": "SYS001", "_parent": { "$ref": "M001" }, "name": "Systeme Chess AI" },
+
+        { "_type": "UMLActor", "_id": "A001", "_parent": { "$ref": "M001" }, "name": "Joueur" },
+        { "_type": "UMLActor", "_id": "A002", "_parent": { "$ref": "M001" }, "name": "IA (Easy AI)" },
+        { "_type": "UMLActor", "_id": "A003", "_parent": { "$ref": "M001" }, "name": "Coach G (Gemini)" },
+        { "_type": "UMLActor", "_id": "A004", "_parent": { "$ref": "M001" }, "name": "Adversaire en ligne" },
+        { "_type": "UMLActor", "_id": "A005", "_parent": { "$ref": "M001" }, "name": "Serveur (Socket.io)" },
+
+        { "_type": "UMLUseCase", "_id": "UC001", "_parent": { "$ref": "M001" }, "name": "S'inscrire" },
+        { "_type": "UMLUseCase", "_id": "UC002", "_parent": { "$ref": "M001" }, "name": "Se connecter" },
+        { "_type": "UMLUseCase", "_id": "UC003", "_parent": { "$ref": "M001" }, "name": "Se deconnecter" },
+        { "_type": "UMLUseCase", "_id": "UC004", "_parent": { "$ref": "M001" }, "name": "Commencer une nouvelle partie" },
+        { "_type": "UMLUseCase", "_id": "UC005", "_parent": { "$ref": "M001" }, "name": "Selectionner une piece" },
+        { "_type": "UMLUseCase", "_id": "UC006", "_parent": { "$ref": "M001" }, "name": "Deplacer une piece" },
+        { "_type": "UMLUseCase", "_id": "UC007", "_parent": { "$ref": "M001" }, "name": "Promouvoir un pion" },
+        { "_type": "UMLUseCase", "_id": "UC008", "_parent": { "$ref": "M001" }, "name": "Jouer contre l'IA" },
+        { "_type": "UMLUseCase", "_id": "UC009", "_parent": { "$ref": "M001" }, "name": "Demander un indice" },
+        { "_type": "UMLUseCase", "_id": "UC010", "_parent": { "$ref": "M001" }, "name": "Jouer l'indice suggere" },
+        { "_type": "UMLUseCase", "_id": "UC011", "_parent": { "$ref": "M001" }, "name": "Jouer en ligne (Multijoueur)" },
+        { "_type": "UMLUseCase", "_id": "UC012", "_parent": { "$ref": "M001" }, "name": "Creer une salle" },
+        { "_type": "UMLUseCase", "_id": "UC013", "_parent": { "$ref": "M001" }, "name": "Rejoindre une salle" },
+        { "_type": "UMLUseCase", "_id": "UC014", "_parent": { "$ref": "M001" }, "name": "Consulter Coach G" },
+        { "_type": "UMLUseCase", "_id": "UC015", "_parent": { "$ref": "M001" }, "name": "Recevoir conseil IA" },
+
+        { "_type": "UMLAssociation", "_id": "AS001", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS001E1", "_parent": { "$ref": "AS001" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS001E2", "_parent": { "$ref": "AS001" }, "reference": { "$ref": "UC001" } } },
+        { "_type": "UMLAssociation", "_id": "AS002", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS002E1", "_parent": { "$ref": "AS002" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS002E2", "_parent": { "$ref": "AS002" }, "reference": { "$ref": "UC002" } } },
+        { "_type": "UMLAssociation", "_id": "AS003", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS003E1", "_parent": { "$ref": "AS003" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS003E2", "_parent": { "$ref": "AS003" }, "reference": { "$ref": "UC003" } } },
+        { "_type": "UMLAssociation", "_id": "AS004", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS004E1", "_parent": { "$ref": "AS004" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS004E2", "_parent": { "$ref": "AS004" }, "reference": { "$ref": "UC004" } } },
+        { "_type": "UMLAssociation", "_id": "AS005", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS005E1", "_parent": { "$ref": "AS005" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS005E2", "_parent": { "$ref": "AS005" }, "reference": { "$ref": "UC005" } } },
+        { "_type": "UMLAssociation", "_id": "AS006", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS006E1", "_parent": { "$ref": "AS006" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS006E2", "_parent": { "$ref": "AS006" }, "reference": { "$ref": "UC006" } } },
+        { "_type": "UMLAssociation", "_id": "AS007", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS007E1", "_parent": { "$ref": "AS007" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS007E2", "_parent": { "$ref": "AS007" }, "reference": { "$ref": "UC008" } } },
+        { "_type": "UMLAssociation", "_id": "AS008", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS008E1", "_parent": { "$ref": "AS008" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS008E2", "_parent": { "$ref": "AS008" }, "reference": { "$ref": "UC009" } } },
+        { "_type": "UMLAssociation", "_id": "AS009", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS009E1", "_parent": { "$ref": "AS009" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS009E2", "_parent": { "$ref": "AS009" }, "reference": { "$ref": "UC010" } } },
+        { "_type": "UMLAssociation", "_id": "AS010", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS010E1", "_parent": { "$ref": "AS010" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS010E2", "_parent": { "$ref": "AS010" }, "reference": { "$ref": "UC011" } } },
+        { "_type": "UMLAssociation", "_id": "AS011", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS011E1", "_parent": { "$ref": "AS011" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS011E2", "_parent": { "$ref": "AS011" }, "reference": { "$ref": "UC012" } } },
+        { "_type": "UMLAssociation", "_id": "AS012", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS012E1", "_parent": { "$ref": "AS012" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS012E2", "_parent": { "$ref": "AS012" }, "reference": { "$ref": "UC013" } } },
+        { "_type": "UMLAssociation", "_id": "AS013", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS013E1", "_parent": { "$ref": "AS013" }, "reference": { "$ref": "A001" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS013E2", "_parent": { "$ref": "AS013" }, "reference": { "$ref": "UC014" } } },
+
+        { "_type": "UMLAssociation", "_id": "AS014", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS014E1", "_parent": { "$ref": "AS014" }, "reference": { "$ref": "A002" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS014E2", "_parent": { "$ref": "AS014" }, "reference": { "$ref": "UC008" } } },
+
+        { "_type": "UMLAssociation", "_id": "AS015", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS015E1", "_parent": { "$ref": "AS015" }, "reference": { "$ref": "A003" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS015E2", "_parent": { "$ref": "AS015" }, "reference": { "$ref": "UC015" } } },
+
+        { "_type": "UMLAssociation", "_id": "AS016", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS016E1", "_parent": { "$ref": "AS016" }, "reference": { "$ref": "A004" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS016E2", "_parent": { "$ref": "AS016" }, "reference": { "$ref": "UC011" } } },
+        { "_type": "UMLAssociation", "_id": "AS017", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS017E1", "_parent": { "$ref": "AS017" }, "reference": { "$ref": "A004" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS017E2", "_parent": { "$ref": "AS017" }, "reference": { "$ref": "UC012" } } },
+        { "_type": "UMLAssociation", "_id": "AS018", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS018E1", "_parent": { "$ref": "AS018" }, "reference": { "$ref": "A004" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS018E2", "_parent": { "$ref": "AS018" }, "reference": { "$ref": "UC013" } } },
+
+        { "_type": "UMLAssociation", "_id": "AS019", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS019E1", "_parent": { "$ref": "AS019" }, "reference": { "$ref": "A005" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS019E2", "_parent": { "$ref": "AS019" }, "reference": { "$ref": "UC001" } } },
+        { "_type": "UMLAssociation", "_id": "AS020", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS020E1", "_parent": { "$ref": "AS020" }, "reference": { "$ref": "A005" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS020E2", "_parent": { "$ref": "AS020" }, "reference": { "$ref": "UC002" } } },
+        { "_type": "UMLAssociation", "_id": "AS021", "_parent": { "$ref": "M001" }, "end1": { "_type": "UMLAssociationEnd", "_id": "AS021E1", "_parent": { "$ref": "AS021" }, "reference": { "$ref": "A005" } }, "end2": { "_type": "UMLAssociationEnd", "_id": "AS021E2", "_parent": { "$ref": "AS021" }, "reference": { "$ref": "UC011" } } },
+
+        { "_type": "UMLInclude", "_id": "INC001", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC008" }, "target": { "$ref": "UC006" } },
+        { "_type": "UMLInclude", "_id": "INC002", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC011" }, "target": { "$ref": "UC006" } },
+        { "_type": "UMLInclude", "_id": "INC003", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC014" }, "target": { "$ref": "UC015" } },
+        { "_type": "UMLInclude", "_id": "INC004", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC010" }, "target": { "$ref": "UC009" } },
+
+        { "_type": "UMLExtend", "_id": "EXT001", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC007" }, "target": { "$ref": "UC006" } },
+        { "_type": "UMLExtend", "_id": "EXT002", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC009" }, "target": { "$ref": "UC008" } },
+        { "_type": "UMLExtend", "_id": "EXT003", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC012" }, "target": { "$ref": "UC011" } },
+        { "_type": "UMLExtend", "_id": "EXT004", "_parent": { "$ref": "M001" }, "source": { "$ref": "UC013" }, "target": { "$ref": "UC011" } },
+
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "DGM001",
+          "_parent": { "$ref": "M001" },
+          "name": "Diagramme de Cas d'Utilisation - Chess AI",
+          "ownedViews": [
+            { "_type": "UMLSubjectView", "_id": "VSB001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "SYS001" }, "x": 175, "y": 50, "width": 960, "height": 760 },
+
+            { "_type": "UMLActorView", "_id": "VA001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "A001" }, "x": 30, "y": 370, "width": 40, "height": 65 },
+            { "_type": "UMLActorView", "_id": "VA002", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "A002" }, "x": 1240, "y": 155, "width": 40, "height": 65 },
+            { "_type": "UMLActorView", "_id": "VA003", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "A003" }, "x": 1240, "y": 395, "width": 40, "height": 65 },
+            { "_type": "UMLActorView", "_id": "VA004", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "A004" }, "x": 1240, "y": 555, "width": 40, "height": 65 },
+            { "_type": "UMLActorView", "_id": "VA005", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "A005" }, "x": 30, "y": 620, "width": 40, "height": 65 },
+
+            { "_type": "UMLUseCaseView", "_id": "VUC001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC001" }, "x": 235, "y": 85, "width": 120, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC002", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC002" }, "x": 470, "y": 85, "width": 130, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC003", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC003" }, "x": 725, "y": 85, "width": 145, "height": 50 },
+
+            { "_type": "UMLUseCaseView", "_id": "VUC004", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC004" }, "x": 195, "y": 235, "width": 210, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC005", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC005" }, "x": 465, "y": 235, "width": 165, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC006", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC006" }, "x": 700, "y": 235, "width": 145, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC007", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC007" }, "x": 910, "y": 235, "width": 145, "height": 50 },
+
+            { "_type": "UMLUseCaseView", "_id": "VUC008", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC008" }, "x": 230, "y": 390, "width": 155, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC009", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC009" }, "x": 485, "y": 390, "width": 155, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC010", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC010" }, "x": 730, "y": 390, "width": 165, "height": 50 },
+
+            { "_type": "UMLUseCaseView", "_id": "VUC011", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC011" }, "x": 195, "y": 545, "width": 205, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC012", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC012" }, "x": 480, "y": 545, "width": 145, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC013", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC013" }, "x": 730, "y": 545, "width": 155, "height": 50 },
+
+            { "_type": "UMLUseCaseView", "_id": "VUC014", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC014" }, "x": 235, "y": 690, "width": 160, "height": 50 },
+            { "_type": "UMLUseCaseView", "_id": "VUC015", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "UC015" }, "x": 510, "y": 690, "width": 165, "height": 50 },
+
+            { "_type": "UMLAssociationView", "_id": "VAS001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS001" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC001" } },
+            { "_type": "UMLAssociationView", "_id": "VAS002", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS002" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC002" } },
+            { "_type": "UMLAssociationView", "_id": "VAS003", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS003" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC003" } },
+            { "_type": "UMLAssociationView", "_id": "VAS004", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS004" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC004" } },
+            { "_type": "UMLAssociationView", "_id": "VAS005", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS005" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC005" } },
+            { "_type": "UMLAssociationView", "_id": "VAS006", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS006" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC006" } },
+            { "_type": "UMLAssociationView", "_id": "VAS007", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS007" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC008" } },
+            { "_type": "UMLAssociationView", "_id": "VAS008", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS008" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC009" } },
+            { "_type": "UMLAssociationView", "_id": "VAS009", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS009" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC010" } },
+            { "_type": "UMLAssociationView", "_id": "VAS010", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS010" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC011" } },
+            { "_type": "UMLAssociationView", "_id": "VAS011", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS011" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC012" } },
+            { "_type": "UMLAssociationView", "_id": "VAS012", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS012" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC013" } },
+            { "_type": "UMLAssociationView", "_id": "VAS013", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS013" }, "tail": { "$ref": "VA001" }, "head": { "$ref": "VUC014" } },
+
+            { "_type": "UMLAssociationView", "_id": "VAS014", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS014" }, "tail": { "$ref": "VA002" }, "head": { "$ref": "VUC008" } },
+
+            { "_type": "UMLAssociationView", "_id": "VAS015", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS015" }, "tail": { "$ref": "VA003" }, "head": { "$ref": "VUC015" } },
+
+            { "_type": "UMLAssociationView", "_id": "VAS016", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS016" }, "tail": { "$ref": "VA004" }, "head": { "$ref": "VUC011" } },
+            { "_type": "UMLAssociationView", "_id": "VAS017", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS017" }, "tail": { "$ref": "VA004" }, "head": { "$ref": "VUC012" } },
+            { "_type": "UMLAssociationView", "_id": "VAS018", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS018" }, "tail": { "$ref": "VA004" }, "head": { "$ref": "VUC013" } },
+
+            { "_type": "UMLAssociationView", "_id": "VAS019", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS019" }, "tail": { "$ref": "VA005" }, "head": { "$ref": "VUC001" } },
+            { "_type": "UMLAssociationView", "_id": "VAS020", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS020" }, "tail": { "$ref": "VA005" }, "head": { "$ref": "VUC002" } },
+            { "_type": "UMLAssociationView", "_id": "VAS021", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "AS021" }, "tail": { "$ref": "VA005" }, "head": { "$ref": "VUC011" } },
+
+            { "_type": "UMLIncludeView", "_id": "VINC001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "INC001" }, "tail": { "$ref": "VUC008" }, "head": { "$ref": "VUC006" } },
+            { "_type": "UMLIncludeView", "_id": "VINC002", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "INC002" }, "tail": { "$ref": "VUC011" }, "head": { "$ref": "VUC006" } },
+            { "_type": "UMLIncludeView", "_id": "VINC003", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "INC003" }, "tail": { "$ref": "VUC014" }, "head": { "$ref": "VUC015" } },
+            { "_type": "UMLIncludeView", "_id": "VINC004", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "INC004" }, "tail": { "$ref": "VUC010" }, "head": { "$ref": "VUC009" } },
+
+            { "_type": "UMLExtendView", "_id": "VEXT001", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "EXT001" }, "tail": { "$ref": "VUC007" }, "head": { "$ref": "VUC006" } },
+            { "_type": "UMLExtendView", "_id": "VEXT002", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "EXT002" }, "tail": { "$ref": "VUC009" }, "head": { "$ref": "VUC008" } },
+            { "_type": "UMLExtendView", "_id": "VEXT003", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "EXT003" }, "tail": { "$ref": "VUC012" }, "head": { "$ref": "VUC011" } },
+            { "_type": "UMLExtendView", "_id": "VEXT004", "_parent": { "$ref": "DGM001" }, "model": { "$ref": "EXT004" }, "tail": { "$ref": "VUC013" }, "head": { "$ref": "VUC011" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
